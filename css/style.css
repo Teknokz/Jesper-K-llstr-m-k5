@@ -1,0 +1,10 @@
+*{
+    background-color: whitesmoke;
+}
+
+
+.navbar-grid{
+display: grid;
+grid-template-columns: repeat(4, 100%);
+grid-template-rows: repeat(1,100%);
+}
