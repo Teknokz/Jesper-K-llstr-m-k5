@@ -1,8 +1,15 @@
-/*
 *{
-
+    margin:0;
 }
-*/
+
+#Title{
+font-family: 'Lobster', 'cursive', 'Trebuchet MS', 'Arial';
+font-size: 40px;
+}
+
+span{
+color: black;
+}
 
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -36,4 +43,16 @@ header a{
     display: grid;
     grid-auto-flow: column;
 }
+
+a:hover{
+  transition: color .5s;
+  color: black;
+}
+/* Bild */
+#showcase{
+    min-height: 400px;
+    background: url('/img/showcase.jpg')no-repeat;
+    background-size: cover;
+}
+
 
