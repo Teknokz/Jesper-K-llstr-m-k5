@@ -1,25 +1,139 @@
 *{
+
     margin:0;
+
 }
 
 #Title{
+
 font-family: 'Lobster', 'cursive', 'Trebuchet MS', 'Arial';
 font-size: 40px;
+padding-left: 10rem;
+
+}
+
+#titleColor{
+
+  color: black;
+
 }
 
 span{
-color: black;
+
+  color: white;
+
 }
 
 body{
+
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 15px;
     line-height: 1.5;
+    padding: 0;
     
 }
 
+body::-webkit-scrollbar{
+
+  width: 0.25rem;
+
+}
+
+body::-webkit-scrollbar-track{
+
+  background: black;
+
+}
+
+body::-webkit-scrollbar-thumb{
+
+  background: lightskyblue;
+
+}
+
+
+main {
+
+margin-left: 5rem;
+padding: 1rem;
+
+}
+
+.navbar{
+
+  position: fixed;
+  background-color: black;
+ transition: width 200ms ease;
+  
+}
+
+.navbar-nav{
+
+list-style: none;
+padding: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+.nav-item{
+
+  width: 100%;
+
+}
+
+.nav-link{
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7) brightness(75%);
+  transition: 600ms;
+}
+
+.nav-link:hover{
+
+filter: grayscale(0%) opacity(1) brightness(100%);
+background: #3f4145;
+
+
+}
+
+.link-text{
+  display: none;
+}
+
+.nav-link svg{
+
+min-width: 2rem;
+margin: 0 1.5rem;
+
+}
+
+.navbar:hover{
+
+width: 9vw;
+
+}
+
+.navbar:hover .link-text {
+  display: block;
+  min-width: 6rem;
+}
+
+.fa-w-18{
+  color: lightskyblue;
+}
+
+
+.fa-w-18{
+
+transition: 600ms;
+
+}
+
 .container{
-    width: 80%;
     margin: auto;
     overflow: hidden;
 }
@@ -39,15 +153,6 @@ header a{
     font-size: 16px;
 }
 
-.navlist{
-    display: grid;
-    grid-auto-flow: column;
-}
-
-a:hover{
-  transition: color .5s;
-  color: black;
-}
 /* Bild */
 #showcase{
     min-height: 400px;
@@ -105,6 +210,7 @@ footer{
     margin-right: 10vw;
     margin-top: 1vw;  
     margin-bottom: 1vw;
+    position: fixed;
     
 
 }
@@ -129,20 +235,34 @@ footer{
 }
 
 
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
+@media only screen and (min-width: 600px) {
+.navbar{
+  top: 0;
+  width: 5rem;
+  height: 100vh;
+}
 }
 
 
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
+@media only screen and (max-width: 600px) {
+.navbar{
+  bottom: 0;
+  width: 100vw;
+  height: 5rem;
+
 }
+.navbar-nav{
+
+  flex-direction: row;
+
+}
+
+.nav-link{
+  justify-content: center;
+}
+
+}
+
 
 
 
